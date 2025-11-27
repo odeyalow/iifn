@@ -1,0 +1,33 @@
+{
+    "title": "About Our Institute",
+    "mainInfo": {
+        "title": "About the Institute",
+        "text": "The Institute of Fundamental Information Technologies is an education and research center that integrates engineering, programming, and robotics disciplines. We build fundamental knowledge and practical skills so that graduates can design reliable systems, develop software, and implement robotic solutions in industry and science. Founded by experts from academic and practical backgrounds, the institute aims for international collaboration and integration of modern development and research methods.\n\nThe institute's program includes lectures, laboratory projects, interdisciplinary teams, internships, and industry collaboration. Our approach combines theory and development, supports research and entrepreneurship, providing students a pathway to careers in development, engineering, and related IT fields. Students have access to modern laboratories, development platforms, and mentorship support from instructor-engineers and researchers."
+    },
+    "accordions": {
+        "title": "Our Directions",
+        "1": {
+            "title": "Engineering",
+            "text": "Engineering focuses on designing and optimizing physical systems, integrating hardware and algorithms. Courses include modeling, mechatronics, and control systems for real-world engineering challenges."
+        },
+        "2": {
+            "title": "Programming",
+            "text": "Programming covers languages, algorithms, and software architectures. Students learn development, testing, DevOps practices, and building scalable applications for industry and science."
+        },
+        "3": {
+            "title": "Robotics",
+            "text": "Robotics combines mechanics, electronics, and programming to create autonomous systems. Practical projects include sensing, motion control, AI integration, and testing."
+        }
+    },
+    "numbers": {
+        "title": "By the Numbers",
+        "researchStaff": "Research Staff",
+        "workYears": "Years of Work",
+        "projectsDone": "Projects Completed",
+        "teachedStudents": "Students Trained"
+    },
+    "summary": {
+        "title": "In Summary",
+        "text": "The Institute of Fundamental Information Technologies develops specialists capable of tackling complex challenges in development, engineering, and robotics. The combination of fundamental education, practical experience, and industry partnerships ensures graduates are competitive in the IT and technical professions market. We support career growth through internships, mentorship, and exchange programs, helping students become leaders in projects."
+    }
+}

@@ -3,10 +3,9 @@ import { routing } from './routing';
 import { notFound } from 'next/navigation';
 
 const NAMESPACES = [
-  'common',
+  'metadata',
   'home',
-  'header',
-  'footer',
+  'headerFooter',
   'aboutUs',
   'conferences',
   'journals',

@@ -1,13 +1,20 @@
 import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
 import getRequestConfig from '../../i18n/request';
 
 import "../../globals.css";
 
-export const metadata = {
-  title: "Институт Информационных Фундаментальных Наук",
-  description: "ИИФН - здесь собрано все, что вам нужно узнать о нас!",
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: { title: t('title'), description: t('description') },
+    twitter: { title: t('title'), description: t('description') },
+  };
+}
 
 export async function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));

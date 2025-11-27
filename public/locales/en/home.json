@@ -1,0 +1,46 @@
+{
+    "hero": {
+        "title": {
+            "1": "Institute of Fundamental Engineering Technologies",
+            "2": "Where Digital Leaders Are Born",
+            "3": "We Create Engineering and Software Solutions",
+            "4": "Teaching Robotics and Development"
+        },
+        "description": "We combine education and practice in engineering, programming, and robotics. We prepare developers, providing fundamental knowledge and skills to create modern digital solutions and pursue a successful career in IT.",
+        "learnMore": "Learn More"
+    },
+    "infiniteScrollText": {
+        "1": "Future Engineering",
+        "2": "Programming",
+        "3": "Robotics",
+        "4": "Digital Technologies",
+        "5": "Scientific Research",
+        "6": "Software Development",
+        "7": "Practical Learning"
+    },
+    "features": {
+        "title": "What We Offer?",
+        "cards": {
+            "1": {
+                "title": "Modern Education",
+                "description": "Practically-oriented programs in engineering, programming, and development. Courses combine fundamental theory and hands-on projects: labs, hackathons, and internships preparing students for real IT industry challenges and entrepreneurial skills."
+            },
+            "2": {
+                "title": "Research and Development",
+                "description": "Institute laboratories conduct interdisciplinary research in robotics, artificial intelligence, and software engineering. Teams work on prototypes, scientific publications, and industrial partnerships to accelerate innovation development and commercialization."
+            },
+            "3": {
+                "title": "Practical Training and Career",
+                "description": "The program includes workshops in development, robotics, and engineering projects, industry exchanges, and career services. We guide students towards employment, internships, and startup creation in the field of fundamental information technologies with mentorship support."
+            }
+        }
+    },
+    "news": {
+        "title": "Our News",
+        "readMore": "Read More"
+    },
+    "cta": {
+        "title": "Have Other Questions?\nWe Will Contact You!",
+        "callMeBack": "Call Me Back"
+    }
+}

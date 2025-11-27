@@ -7,6 +7,15 @@
   font-style: normal;
 }
 
+@theme {
+    --color-gray: #F4F3F3;
+    --color-yellow-1: #F6DE26;
+    --color-yellow-2: #F1BA0A;
+    --color-red-1: #A70B0B;
+    --color-red-2: #850A0A;
+    --color-brown: #372B2B;
+}
+
 html {
   font-size: 10px;
 }

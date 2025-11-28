@@ -21,7 +21,7 @@ html {
   color: #372B2B;
 }
 
-button {
+button, a {
   transition: ease .2s;
 }
 

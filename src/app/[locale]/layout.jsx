@@ -3,6 +3,8 @@ import { getTranslations } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
 import getRequestConfig from '../../i18n/request';
 
+import MainLayout from '../../components/layouts/mainLayout';
+
 import "../../globals.css";
 
 export async function generateMetadata({ params }) {
@@ -25,7 +27,6 @@ export default async function RootLayout({
   params
 }) {
   const { locale } = await params;
-  // const typedLocale = locale[number];
   const { messages } = await getRequestConfig({
     requestLocale: Promise.resolve(locale),
   }); 
@@ -34,7 +35,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <MainLayout>{children}</MainLayout>
         </NextIntlClientProvider>
       </body>
     </html>

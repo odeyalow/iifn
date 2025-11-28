@@ -31,8 +31,8 @@ const LangSelect = () => {
   }, []);
 
   return (
-    <div className="relative group h-full" onClick={() => setShowdropdown(prev => !prev)} ref={selectBtnRef}>
-       <Button className={`font-bold flex gap-[5px] ${showDropdown && 'bg-yellow-2'}`}>
+    <div className="relative z-99 group h-full" onClick={() => setShowdropdown(prev => !prev)} ref={selectBtnRef}>
+       <Button color='yellow-1' size='small' className={`font-bold flex gap-[5px] ${showDropdown && 'bg-yellow-2'}`}>
           {locale.toUpperCase()}
           <ArrowDownIcon/>
         </Button>

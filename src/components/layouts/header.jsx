@@ -14,7 +14,7 @@ const Header = async () => {
     const activeStyles = 'border-3 border-yellow-1 text-yellow-1';
 
     return (
-        <header className="w-full px-10 max-w-[1230px] mx-auto min-h-auto flex justify-between items-center gap-2.5 z-99">
+        <header className="w-full px-10 max-w-[1280px] mx-auto min-h-auto flex justify-between items-center gap-2.5 z-99">
             <NavLink href='' label={t('logoText')} className="text-[2rem] font-extrabold! bg-yellow-1 border-none text-brown! hover:bg-yellow-2"/>
             <nav className="max-lg:hidden">
                 <NavLink href='' label={t('home')} activeStyles={activeStyles}/>

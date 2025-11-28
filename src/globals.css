@@ -21,7 +21,7 @@ html {
   color: #372B2B;
 }
 
-button, a {
+button, a, svg {
   transition: ease .2s;
 }
 

@@ -5,7 +5,7 @@ const MainLayout = ({ children }) => {
     return (
          <main className="relative w-full h-max bg-white pt-15">
             <Header />
-            <div className="max-w-[1280px] mx-auto h-svh px-10">
+            <div className="max-w-[1280px] mx-auto min-h-svh px-10 overflow-hidden">
                 {children}
             </div>
             <Footer />

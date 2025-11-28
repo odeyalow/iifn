@@ -10,7 +10,7 @@ import InstagramIcon from "../../assets/socials/instagramIcon";
 const Footer = async () => {
     const t = await getTranslations('headerFooter');
     return (
-        <footer className="w-full bg-red-2 relative overflow-hidden ">
+        <footer className="w-full bg-red-2 relative overflow-hidden">
             <div className="max-w-[1280px] px-10 py-[50px] mx-auto flex justify-between items-center relative z-1 max-md:flex-col gap-10">
                 <div className="self-start">
                     <h5 className="text-yellow-2 text-[3rem] font-extrabold mb-10">{t('contacts')}</h5>

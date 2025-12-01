@@ -19,6 +19,7 @@
 html {
   font-size: 10px;
   color: #372B2B;
+  scroll-behavior: smooth;
 }
 
 button, a, svg {

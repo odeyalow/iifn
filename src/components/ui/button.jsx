@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useLocale } from "next-intl";
 
-const Button = ({size, color, link, className, onClick, children }) => {
+const Button = ({ size, color, link, className, onClick, children }) => {
     const locale = useLocale();
 
     const sizeStyles = 

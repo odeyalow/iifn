@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "../../components/ui/button";
 import AnimatedTitle from "../../components/ux/animatedTitle";
 import LoopCarousel from "../../components/ux/loopCarousel";
+import FeatureCard from "../../components/layouts/featureCard";
 
 const HomePage = async () => {
   const t = await getTranslations('home');
@@ -61,13 +62,35 @@ const HomePage = async () => {
         style={{width: 'clamp(17.5rem, 40vw, 50rem)'}}
         className="max-w-[500px] absolute max-sm:max-w-[175px] z-5 max-sm:-right-10 -right-25 -bottom-45 max-lg:-bottom-15 max-md:-bottom-7"/>
       </section>
-      <section className="w-full bg-gray rounded-[20px] py-[25px] max-sm:py-5] relative">
+      <section className="lg:w-[77lvw] bg-gray rounded-[20px] py-[25px] max-sm:py-[20px] relative">
         <div className="top-0 z-2 rounded-[20px] absolute w-full h-full shadow-[inset_25px_0_16px_-8px_#F4F3F3,inset_-25px_0_16px_-8px_#F4F3F3]"></div>
         <LoopCarousel />
       </section>
-      <section >
-          <h2 className="text-5xl">{t('features.title')}</h2>
-
+      <section>
+          <h2 className="text-5xl text-center font-extrabold mb-[30px] max-sm:mb-[20px]">{t('features.title')}</h2>
+          <div className="flex flex-col gap-[30px] max-sm:gap-[20px]">
+            <FeatureCard icon={
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-12.5" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13m9-13v13m9-13v13"/></svg>
+            } title={t('features.cards.1.title')} text={t('features.cards.1.description')}/>
+            <div className="self-end relative z-2">
+              <FeatureCard icon={
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-12.5" viewBox="0 0 24 24" fill="currentColor"><g fill="none" fillRule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M13 3a1 1 0 1 0-2 0v.5a1 1 0 1 0 2 0zm-8.5 9a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h.5a1 1 0 0 1 1 1M22 12a1 1 0 0 1-1 1h-.5a1 1 0 1 1 0-2h.5a1 1 0 0 1 1 1m-10 7.5a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0v-.5a1 1 0 0 1 1-1m7.778-13.864a1 1 0 0 0-1.414-1.414l-2.121 2.12a1 1 0 1 0 1.414 1.415zM7.758 16.243a1 1 0 0 1 0 1.414L5.635 19.78a1 1 0 0 1-1.414-1.415l2.121-2.12a1 1 0 0 1 1.414 0M5.635 4.222a1 1 0 0 0-1.414 1.414l2.12 2.121a1 1 0 0 0 1.415-1.414zm10.607 12.021a1 1 0 0 1 1.414 0l2.121 2.121a1 1 0 1 1-1.414 1.415l-2.121-2.122a1 1 0 0 1 0-1.414M12.948 6.14a1 1 0 0 0-1.888 0a8.02 8.02 0 0 1-4.92 4.92a1 1 0 0 0 0 1.888a8.03 8.03 0 0 1 4.92 4.92a1 1 0 0 0 1.888 0a8.03 8.03 0 0 1 4.92-4.92a1 1 0 0 0 0-1.888a8.03 8.03 0 0 1-4.92-4.92m-.944 9.094a10.05 10.05 0 0 0-3.23-3.23a10.05 10.05 0 0 0 3.23-3.23a10.05 10.05 0 0 0 3.23 3.23a10.05 10.05 0 0 0-3.23 3.23"/></g></svg>
+              } title={t('features.cards.2.title')} text={t('features.cards.2.description')}/>
+            </div>
+            <div className="relative">
+              
+              <FeatureCard icon={
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-12.5" viewBox="1 1 22 22" fill="currentColor"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75"><path d="m4 10l8-4l8 4l-8 4zm16 0v4"/><path d="M7 12v5s.455 2 5 2c4.546 0 5-2 5-2v-5"/></g></svg>
+              } title={t('features.cards.3.title')} text={t('features.cards.3.description')}
+              children={
+                <Image
+                src='/images/features.svg'
+                width={250}
+                height={250}
+                alt="Decor" className="absolute -top-67 z-1 ml-15 max-lg:hidden"/>
+              }/>
+            </div>
+          </div>
       </section>
     </div>
   );

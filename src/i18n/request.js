@@ -7,6 +7,7 @@ const NAMESPACES = [
   'home',
   'headerFooter',
   'aboutUs',
+  'news',
   'conferences',
   'journals',
   'notFound'

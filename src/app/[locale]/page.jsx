@@ -5,6 +5,7 @@ import Button from "../../components/ui/button";
 import AnimatedTitle from "../../components/ux/animatedTitle";
 import LoopCarousel from "../../components/ux/loopCarousel";
 import FeatureCard from "../../components/layouts/featureCard";
+import NewsCard from "../../components/layouts/newsCard";
 
 const HomePage = async () => {
   const t = await getTranslations('home');
@@ -37,20 +38,20 @@ const HomePage = async () => {
           </div>
         </div>
         <div className="flex gap-5 max-sm:hidden">
-          <Button link='about-us' size="big" color="white" className='rounded-3xl font-semibold group'>
+          <Button link='about-us' size="big" color="white" className='rounded-3xl font-semibold'>
             {t('hero.learnMore')}
             <svg xmlns="http://www.w3.org/2000/svg" className="w-11 -rotate-90 group-hover:-translate-y-1 group-hover:translate-x-1" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7v10m0 0H7m10 0L7 7"/></svg>
           </Button>
-          <Button size="big" color="white" className='rounded-3xl font-semibold group w-[60px] px-0! justify-center group'>
+          <Button size="big" color="white" className='rounded-3xl font-semibold w-[60px] px-0! justify-center'>
             <svg viewBox="0 0 24 24" fill="none" className="w-12 group-hover:translate-y-1.5" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7.33199 16.3154C6.94146 15.9248 6.3083 15.9248 5.91777 16.3154C5.52725 16.7059 5.52725 17.339 5.91777 17.7296L10.5834 22.3952C11.3644 23.1762 12.6308 23.1762 13.4118 22.3952L18.0802 17.7267C18.4707 17.3362 18.4707 16.703 18.0802 16.3125C17.6897 15.922 17.0565 15.922 16.666 16.3125L13 19.9786V2.0001C13 1.44781 12.5523 1.0001 12 1.0001C11.4477 1.0001 11 1.44781 11 2.0001V19.9833L7.33199 16.3154Z" fill="currentColor"></path> </g></svg>
           </Button>
         </div>
         <div className="flex gap-5 sm:hidden relative z-10">
-          <Button link='about-us' size="small" color="white" className='rounded-2xl font-semibold group'>
+          <Button link='about-us' size="small" color="white" className='rounded-2xl font-semibold'>
             {t('hero.learnMore')}
             <svg xmlns="http://www.w3.org/2000/svg" className="w-10 -rotate-90 group-hover:-translate-y-1 group-hover:translate-x-1" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7v10m0 0H7m10 0L7 7"/></svg>
           </Button>
-          <Button size="small" color="white" className='rounded-2xl font-semibold group w-[40px] px-0! justify-center group'>
+          <Button size="small" color="white" className='rounded-2xl font-semibold w-[40px] px-0! justify-center'>
             <svg viewBox="0 0 24 24" fill="none" className="w-9 group-hover:translate-y-1.5" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7.33199 16.3154C6.94146 15.9248 6.3083 15.9248 5.91777 16.3154C5.52725 16.7059 5.52725 17.339 5.91777 17.7296L10.5834 22.3952C11.3644 23.1762 12.6308 23.1762 13.4118 22.3952L18.0802 17.7267C18.4707 17.3362 18.4707 16.703 18.0802 16.3125C17.6897 15.922 17.0565 15.922 16.666 16.3125L13 19.9786V2.0001C13 1.44781 12.5523 1.0001 12 1.0001C11.4477 1.0001 11 1.44781 11 2.0001V19.9833L7.33199 16.3154Z" fill="currentColor"></path> </g></svg>
           </Button>
         </div>
@@ -67,7 +68,8 @@ const HomePage = async () => {
         <LoopCarousel />
       </section>
       <section>
-          <h2 className="text-5xl text-center font-extrabold mb-[30px] max-sm:mb-[20px]">{t('features.title')}</h2>
+          <h2  style={{fontSize: 'clamp(2rem, 5vw, 3rem)'}}
+          className="text-center font-extrabold mb-[30px] max-sm:mb-[20px]">{t('features.title')}</h2>
           <div className="flex flex-col gap-[30px] max-sm:gap-[20px]">
             <FeatureCard icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="w-12.5" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13m9-13v13m9-13v13"/></svg>
@@ -91,6 +93,15 @@ const HomePage = async () => {
               }/>
             </div>
           </div>
+      </section>
+      <section className="bg-gray rounded-[20px] p-[25px] max-sm:p-[20px]">
+            <h2 style={{fontSize: 'clamp(2rem, 5vw, 3rem)'}}
+            className="text-center text-yellow-2 font-extrabold mb-[30px] max-sm:mb-[20px]">{t('news.title')}</h2>
+            <div className="gap-[25px] grid md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] max-md:grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
+              <NewsCard id='1' imageSrc='/images/news-1.jpg' />
+              <NewsCard id='2' imageSrc='/images/news-2.jpg' />
+              <NewsCard id='3' imageSrc='/images/news-3.jpg' />
+            </div>
       </section>
     </div>
   );

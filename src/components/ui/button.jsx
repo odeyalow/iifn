@@ -15,7 +15,7 @@ const Button = ({size, color, link, className, onClick, children }) => {
     if ( link ) {
         return (
             <Link href={`/${locale}/${link}`} tabIndex={-1}>
-                <button className={`rounded-2xl active:translate-y-0.5 cursor-pointer ${sizeStyles} ${colortStyles} ${className}`}>
+                <button className={`rounded-2xl active:translate-y-0.5 cursor-pointer group ${sizeStyles} ${colortStyles} ${className}`}>
                     {children}
                 </button>
             </Link>
@@ -23,7 +23,7 @@ const Button = ({size, color, link, className, onClick, children }) => {
     } else {
         return (
             <button onClick={onClick}
-            className={`rounded-2xl active:translate-y-0.5 cursor-pointer ${sizeStyles} ${colortStyles} ${className}`}>
+            className={`rounded-2xl active:translate-y-0.5 cursor-pointer group ${sizeStyles} ${colortStyles} ${className}`}>
                 {children}
             </button>
         );

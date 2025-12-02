@@ -13,7 +13,7 @@ const NavLink = ({ href, label, className, activeStyles }) => {
         <Link href={`/${locale}/${href}`} tabIndex={-1}>
             <button tabIndex={pathname.slice(4) === href ? -1 : null}
             className={`bg-transparent font-medium px-[1.3rem] text-[1.6rem] h-[40px] cursor-pointer hover:text-yellow-1 rounded-2xl border-3 border-transparent
-            ${styles} ${className}`}>
+            ${styles} ${pathname.slice(4) !== href && 'hover:translate-y-0.5'} ${className}`}>
                 {label}
             </button>
         </Link>

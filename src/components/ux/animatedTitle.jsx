@@ -13,6 +13,7 @@ const AnimatedTitle = () => {
                     options={{
                         strings: [t('hero.title.1'), t('hero.title.2'), t('hero.title.3'), t('hero.title.4')],
                         autoStart: true,
+                        delay: 50,
                         deleteSpeed: 50,
                         loop: true,
                     }}

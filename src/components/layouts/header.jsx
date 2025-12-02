@@ -16,7 +16,7 @@ const Header = async () => {
     return (
         <header className="w-full min-h-auto z-99 sticky top-0 bg-white/25 backdrop-blur-xl py-6">
             <div className="max-w-[1280px] px-10 flex justify-between items-center gap-2.5 mx-auto w-full">
-                <NavLink href='' label={t('logoText')} className="text-[2rem] font-extrabold! bg-yellow-1 border-none text-brown! hover:bg-yellow-2"/>
+                <NavLink href='' label={t('logoText')} className="text-[2rem] font-extrabold! bg-yellow-1 border-none text-brown! hover:bg-yellow-2 hover:translate-y-0!"/>
                 <nav className="max-lg:hidden">
                     <NavLink href='' label={t('home')} activeStyles={activeStyles}/>
                     <NavLink href='about-us' label={t('aboutUs')} activeStyles={activeStyles}/>

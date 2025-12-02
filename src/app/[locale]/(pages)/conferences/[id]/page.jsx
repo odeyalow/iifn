@@ -2,21 +2,25 @@
 
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 import PageContainer from "../../../../../components/layouts/pageContainer";
-import Button from "../../../../../components/ui/button";
 import TextBlock from "../../../../../components/ux/textBlock";
 
-const ConferencesPage = () => {
+const SingleConferencePage = () => {
     const t =  useTranslations('conferences');
     const pathname = usePathname();
     const conferenceNumber = pathname.slice(16);
 
+    if ( isNaN(Number(conferenceNumber)) || conferenceNumber > 1 ) {
+        notFound();
+    }
+
     return (
-        <PageContainer>
-            <TextBlock title={t(`${conferenceNumber}.title`)} text={
+        <PageContainer decor>
+            <TextBlock decor title={t(`${conferenceNumber}.title`)} text={
                 <>
                     <Image
                     src={`/images/conference-${conferenceNumber}.png`}
@@ -27,12 +31,12 @@ const ConferencesPage = () => {
                         t.rich(`${conferenceNumber}.text`, {
                             link1: (chunks) => <Link href='https://conf.astrokaznu.kz/' className="text-yellow-1 hover:underline">{chunks}</Link>,
                             link2: (chunks) => <Link href='https://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/meetings/' className="text-yellow-1 hover:underline">{chunks}</Link>
-                        })  
-                    }              
+                        })
+                    }
                 </>
             }/>
         </PageContainer>
     );
 }
  
-export default ConferencesPage;
+export default SingleConferencePage;

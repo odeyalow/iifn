@@ -9,6 +9,7 @@ const Button = ({ size, color, link, className, onClick, children }) => {
     (size === 'small' && 'h-[40px] text-[18px] flex items-center px-[1.3rem]');
     const colortStyles = 
     (color === 'white' && 'bg-white hover:bg-gray') ||
+    (color === 'gray' && 'bg-gray hover:bg-yellow-1') ||
     (color === 'yellow-1' && 'bg-yellow-1 hover:bg-yellow-2') ||
     (color === 'yellow-2' && 'bg-yellow-2 hover:bg-orange-500');
 

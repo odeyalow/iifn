@@ -11,7 +11,7 @@ const Accordion = ({ title, text, delay }) => {
         <motion.button
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true }}
         transition={{
             duration: 0.1,
             ease: "easeIn",

@@ -5,22 +5,30 @@ export async function POST(req) {
     const { phone } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: process.env.SMTP_PORT === "465",
       auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: false,
+      }
     });
+
+    await transporter.verify();
 
     await transporter.sendMail({
-      from: process.env.MAIL_USER,
-      to: process.env.MAIL_USER,
+      from: process.env.SMTP_USER,
+      to: process.env.SMTP_USER,
       subject: "Новая заявка с ИИФН",
-      text: `Пользователь отправил свой номер: ${phone}, свяжитесь с ним!`,
+      text: `Пользователь отправил свой номер телефона для обратной связи с сайта ИИФН: ${phone}`,
     });
 
-    return Response.json({ success: true });
-  } catch {
-    return Response.json({ message: "Server error" }, { status: 500 });
+    return Response.json({ ok: true });
+  } catch (err) {
+    console.error("EMAIL ERROR:", err);
+    return Response.json({ error: "Ошибка сервера" }, { status: 500 });
   }
 }

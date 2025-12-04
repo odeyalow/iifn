@@ -3,12 +3,14 @@ import Image from "next/image";
 
 import PageContainer from "../../../../components/layouts/pageContainer";
 import Button from "../../../../components/ui/button";
+import MetaHead from "../../../../components/ux/metaHead";
 
 const ConferencesPage = async () => {
     const t = await getTranslations('conferences');
 
     return (
-        <PageContainer title={t('title')}>
+        <MetaHead name='conferences' urlPath='/conferences'>
+            <PageContainer title={t('title')}>
             <section className="flex gap-[2.5rem] items-center max-md:flex-col">
                 <div className="w-full relative">
                     <Image
@@ -44,7 +46,8 @@ const ConferencesPage = async () => {
                     <h3 className="text-center text-3xl text-black/25 font-semibold">{t('moreConferencesSoon')}</h3>
                 </div>
             </section>
-        </PageContainer>
+            </PageContainer>
+        </MetaHead>
     );
 }
  

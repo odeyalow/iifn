@@ -1,4 +1,18 @@
 {
     "title": "Institute of Fundamental Engineering Technologies",
-    "description": "The Institute of Fundamental Information Technologies combines education, research, and practical training in engineering, programming, and robotics. We prepare developers and engineers, providing fundamental knowledge and practical skills to create innovative digital solutions and pursue a successful career in IT and related technical fields. The curriculum includes projects, internships, and interdisciplinary practice."
+    "description": "The Institute of Fundamental Information Technologies combines education, research, and practical training in engineering, programming, and robotics. We prepare developers and engineers, providing fundamental knowledge and practical skills to create innovative digital solutions and pursue a successful career in IT and related technical fields. The curriculum includes projects, internships, and interdisciplinary practice.",
+    "pages": {
+        "home": "Institute of Engineering Fundamental Sciences",
+        "aboutUs": "About Us",
+        "conferences": "Conferences",
+        "journals": "Journals",
+        "news": "News"
+    },
+    "keywords": {
+        "home": "Institute of Information Fundamental Technologies, education, engineering, programming, robotics",
+        "aboutUs": "About Us, institute, directions, education, development, research",
+        "conferences": "Conferences, scientific events, technology, innovation, students",
+        "journals": "Journals, publications, research, articles, engineering, programming",
+        "news": "News, events, achievements, education, innovation, students"
+    }
 }

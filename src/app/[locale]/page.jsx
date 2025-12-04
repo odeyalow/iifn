@@ -6,7 +6,7 @@ import AnimatedTitle from "../../components/ux/animatedTitle";
 import LoopCarousel from "../../components/ux/loopCarousel";
 import FeatureCard from "../../components/layouts/featureCard";
 import NewsCard from "../../components/layouts/newsCard";
-import PhoneInput from "../../components/ui/phoneInput";
+import PhoneSendForm from "../../components/forms/phoneSendForm";
 
 const HomePage = async () => {
   const t = await getTranslations('home');
@@ -117,10 +117,7 @@ const HomePage = async () => {
             style={{ width: 'clamp(20rem, 25vw, 40rem)'}}
             alt="Decor" className="absolute left-25 top-65 max-lg:hidden"
             />
-            <div className="bg-red-2 p-[25px] rounded-[15px] max-w-[370px] flex flex-col gap-5 lg:absolute bottom-[25px] right-[175px] z-10 max-sm:mx-auto">
-              <PhoneInput />
-              <Button color='yellow-2' size='small' className='w-full justify-center font-medium'>{t('cta.callMeBack')}</Button>
-            </div>
+            <PhoneSendForm />
             <Image
             src='/images/cta-1.svg'
             width={225}
@@ -132,7 +129,7 @@ const HomePage = async () => {
             src='/images/cta-2.svg'
             width={225}
             height={225}
-            alt="Decor" className="absolute right-20 bottom-20 z-10 max-lg:hidden"
+            alt="Decor" className="absolute right-20 bottom-20 z-5 max-lg:hidden"
             />
         </section>
       </div>

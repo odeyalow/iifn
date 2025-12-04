@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { useLocale } from "next-intl";
 
-const Button = ({ size, color, link, className, onClick, children }) => {
+const Button = ({ size, color, link, disabled, className, onClick, children }) => {
     const locale = useLocale();
 
     const sizeStyles = 
     (size === 'big' && 'h-[60px] text-[20px] flex items-center px-10') ||
     (size === 'small' && 'h-[40px] text-[18px] flex items-center px-[1.3rem]');
-    const colortStyles = 
+    const colorStyles = 
     (color === 'white' && 'bg-white hover:bg-gray') ||
     (color === 'gray' && 'bg-gray hover:bg-yellow-1') ||
     (color === 'yellow-1' && 'bg-yellow-1 hover:bg-yellow-2') ||
@@ -16,15 +16,15 @@ const Button = ({ size, color, link, className, onClick, children }) => {
     if ( link ) {
         return (
             <Link href={`/${locale}/${link}`} tabIndex={-1}>
-                <button className={`rounded-2xl active:translate-y-0.5 cursor-pointer group ${sizeStyles} ${colortStyles} ${className}`}>
+                <button disabled={disabled} className={`rounded-2xl active:translate-y-0.5 cursor-pointer group ${sizeStyles} ${colorStyles} ${className}`}>
                     {children}
                 </button>
             </Link>
         );
     } else {
         return (
-            <button onClick={onClick}
-            className={`rounded-2xl active:translate-y-0.5 cursor-pointer group ${sizeStyles} ${colortStyles} ${className}`}>
+            <button onClick={onClick} disabled={disabled}
+            className={`rounded-2xl active:translate-y-0.5 cursor-pointer group ${sizeStyles} ${colorStyles} ${className}`}>
                 {children}
             </button>
         );

@@ -41,6 +41,9 @@
     },
     "cta": {
         "title": "Have Other Questions?\nWe Will Contact You!",
+        "phoneValidation": "Please enter a valid phone number!",
+        "sent": "Your phone number has been sent successfully, we will contact you shortly!",
+        "sendError": "There was an error sending your phone number, please try again later!",
         "callMeBack": "Call Me Back"
     }
 }

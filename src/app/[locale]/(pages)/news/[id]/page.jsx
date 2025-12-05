@@ -7,7 +7,6 @@ import Image from "next/image";
 
 import PageContainer from "../../../../../components/layouts/pageContainer";
 import TextBlock from "../../../../../components/ux/textBlock";
-import MetaHead from "../../../../../components/ux/metaHead";
 
 const SingleNewsPage = () => {
     const t =  useTranslations('news');
@@ -19,8 +18,7 @@ const SingleNewsPage = () => {
     }
 
     return (
-        <MetaHead name="news" urlPath={`/news/${newsNumber}`}>
-            <PageContainer decor>
+        <PageContainer decor>
                 <TextBlock decor title={t(`${newsNumber}.title`)} text={
                     <>
                         <Image
@@ -33,8 +31,7 @@ const SingleNewsPage = () => {
                         }
                     </>
                 }/>
-            </PageContainer>
-        </MetaHead>
+        </PageContainer>
     );
 }
  

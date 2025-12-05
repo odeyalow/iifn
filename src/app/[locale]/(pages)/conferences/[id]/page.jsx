@@ -8,7 +8,6 @@ import Image from "next/image";
 
 import PageContainer from "../../../../../components/layouts/pageContainer";
 import TextBlock from "../../../../../components/ux/textBlock";
-import MetaHead from "../../../../../components/ux/metaHead";
 
 const SingleConferencePage = () => {
     const t =  useTranslations('conferences');
@@ -20,8 +19,7 @@ const SingleConferencePage = () => {
     }
 
     return (
-        <MetaHead name="conferences" urlPath={`/conferences/${conferenceNumber}`}>
-            <PageContainer decor>
+        <PageContainer decor>
             <TextBlock decor title={t(`${conferenceNumber}.title`)} text={
                 <>
                     <Image
@@ -37,8 +35,7 @@ const SingleConferencePage = () => {
                     }
                 </>
             }/>
-            </PageContainer>
-        </MetaHead>
+        </PageContainer>
     );
 }
  

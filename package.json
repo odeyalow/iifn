@@ -11,12 +11,12 @@
   "dependencies": {
     "keen-slider": "^6.8.6",
     "motion": "^12.23.24",
-    "next": "16.0.5",
+    "next": "^16.0.7",
     "next-intl": "^4.5.5",
     "nodemailer": "^7.0.11",
-    "react": "19.2.0",
+    "react": "^19.2.1",
     "react-countup": "^6.5.3",
-    "react-dom": "19.2.0",
+    "react-dom": "^19.2.1",
     "react-imask": "^7.6.1",
     "typewriter-effect": "^2.22.0"
   },

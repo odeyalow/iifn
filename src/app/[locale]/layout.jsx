@@ -7,7 +7,16 @@ import MainLayout from '../../components/layouts/mainLayout';
 
 import "../../globals.css";
 
-
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: { title: t('title'), description: t('description') },
+    twitter: { title: t('title'), description: t('description') },
+  };
+}
 
 export async function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
